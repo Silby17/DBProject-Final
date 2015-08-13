@@ -1,0 +1,55 @@
+JFDML JFormDesigner: "5.2.2.0.199" Java: "1.7.0_40" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {seq {comp label1:::p::p, space :p:18:p, par l {comp scrollPane2:::p:394:p, seq {comp btnRunDDL:::p:129:p, space :p:56:p, comp btnrunDML:::p:129:p}}}, comp label2::l:p::p}, space :p:46:p, comp scrlpMain:::p::p, space :::x}}"
+			"$verticalGroup": "par l {seq l {space :p:13:p, par l {seq {comp scrlpMain::::552:x, space :::p}, seq {par l {comp scrollPane2:::p:228:p, comp label1:::p::p}, par l {seq {space :p:30:p, par b {comp btnRunDDL::b:p:53:p, comp btnrunDML::b:p:53:p}, space :245:247:x}, seq t {space ::306:x, comp label2:::p::p}}}}}}"
+		} ) {
+			name: "this"
+			"title": "Welcome"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnRunDDL"
+				"text": "Run DDL"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnRunActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnRunDDLActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnRunDDLActionPerformed", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrlpMain"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "table1"
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Enter Query:"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnrunDML"
+				"text": "Run DML"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnRunActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnrunDMLActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnrunDMLActionPerformed", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane2"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "taInput"
+					"toolTipText": "Enter Query Here"
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Created by: Yossi Silberhaft, Steven Lapp, Binyamin Greenberg, Daniel Blinick"
+				"font": new java.awt.Font( "Segoe UI", 0, 10 )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1030, 610 )
+		} )
+	}
+}
