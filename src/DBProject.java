@@ -6,9 +6,6 @@
  */
 
 import javax.swing.*;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.InputStreamReader;
 import java.sql.*;
 
 public class DBProject extends JFrame {
@@ -23,9 +20,6 @@ public class DBProject extends JFrame {
      * @param args the file given by the user
      */
     public static void main(String[] args) {
-        //Gets file from the args
-
-
         //Creating of new JFrame
         JFrame frame = new JFrame();
         ReadConfig readConfigurationFile = new ReadConfig();

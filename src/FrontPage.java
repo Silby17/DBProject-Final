@@ -79,7 +79,6 @@ public class FrontPage extends JFrame {
 
             Vector columnNamesVector = new Vector();
             Vector dataVector = new Vector();
-
             for (int i = 0; i < data.size(); i++)
             {
                 ArrayList subArray = (ArrayList)data.get(i);
