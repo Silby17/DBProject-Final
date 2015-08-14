@@ -122,9 +122,9 @@ public class FrontPage extends JFrame {
     /**
      * This button will deal with the running of a DDL query
      * It will do a check that will ensure that the query is correct
-     * @param e
+     * @param a
      */
-    private void btnRunDDLActionPerformed(ActionEvent e) {
+    private void btnRunDDLActionPerformed(ActionEvent a) {
         userInput = taInput.getText();
         if(userInput.startsWith("SELECT") || userInput.startsWith("SHOW")){
             result = "WRONG QUERY STRUCTURE";
@@ -138,8 +138,8 @@ public class FrontPage extends JFrame {
                 stat.executeUpdate(userInput);
                 JOptionPane.showMessageDialog(frame, "Update completed");
             //Catch if there is a problem will the statement
-            } catch (SQLException ex) {
-                if(ex.toString().contains("syntax")){
+            } catch (SQLException e) {
+                if(e.toString().contains("syntax")){
                     JOptionPane.showMessageDialog(frame, "WRONG QUERY STRUCTURE");
                     taInput.setText("");
                 }

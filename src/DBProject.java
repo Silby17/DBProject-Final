@@ -24,12 +24,12 @@ public class DBProject extends JFrame {
      */
     public static void main(String[] args) {
         //Gets file from the args
-        File configFile = new File(args[0]);
+
 
         //Creating of new JFrame
         JFrame frame = new JFrame();
         ReadConfig readConfigurationFile = new ReadConfig();
-        DBConnectionInfo connectionInfo = readConfigurationFile.getConnectionInfoFromFile(configFile);
+        DBConnectionInfo connectionInfo = readConfigurationFile.getConnectionInfoFromFile("config.txt");
         //Connect to the MySQL database reading from the test file
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

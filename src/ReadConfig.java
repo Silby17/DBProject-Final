@@ -15,7 +15,7 @@ import java.io.IOException;
  */
 public class ReadConfig {
 
-    public DBConnectionInfo getConnectionInfoFromFile(File fileName) {
+    public DBConnectionInfo getConnectionInfoFromFile(String fileName) {
         //Deceleration of Variables
         String dbURL = "";
         String userName = "";
