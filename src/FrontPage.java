@@ -34,7 +34,7 @@ public class FrontPage extends JFrame {
     /**
      * This Button will deal with executing DML queries
      * It will also check whether the query is in the correct form.
-     * @param a
+     * @param a not used here
      */
     private void btnrunDMLActionPerformed(ActionEvent a) {
         //Clears the array list before the running of a query
@@ -55,7 +55,6 @@ public class FrontPage extends JFrame {
 
                 //Gets the number of columns
                 int columns = md.getColumnCount();
-
                 for(int i = 1; i <= columns; i++){
                     columnNames.add(md.getColumnName(i));
                 }
