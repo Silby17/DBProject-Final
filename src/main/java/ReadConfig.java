@@ -4,10 +4,7 @@
  * Binyamin Greenberg 200220671 89-281-04
  * Steven Lapp 204785240 89-281-05
  */
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * This Class will read the configuration file given to us
@@ -22,13 +19,15 @@ public class ReadConfig {
         String password = "";
         int counter = 1;
 
+        InputStream in = getClass().getResourceAsStream(fileName);
+
         //Sets the buffer reader to NULL
         BufferedReader br = null;
 
         //Gets the DB information from the Config.txt file
         try{
             String sCurrentLine;
-            br = new BufferedReader(new FileReader(fileName));
+            br = new BufferedReader(new InputStreamReader(in));
             while ((sCurrentLine = br.readLine()) != null){
                 if(counter == 1){
                     dbURL = sCurrentLine;

@@ -6,6 +6,7 @@
  */
 
 import javax.swing.*;
+import java.io.*;
 import java.sql.*;
 
 public class DBProject extends JFrame {
@@ -21,6 +22,7 @@ public class DBProject extends JFrame {
      */
     public static void main(String[] args) {
         //Creating of new JFrame
+
         JFrame frame = new JFrame();
         ReadConfig readConfigurationFile = new ReadConfig();
         DBConnectionInfo connectionInfo = readConfigurationFile.getConnectionInfoFromFile("config.txt");
@@ -37,5 +39,10 @@ public class DBProject extends JFrame {
         FrontPage fp = new FrontPage();
         fp.setVisible(true);
         fp.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+
+        //ONE SEC
+
+       //IN ORDER TO MAKE A MAVEN OR ANT YOU MUST DO THIS...
     }
 }
