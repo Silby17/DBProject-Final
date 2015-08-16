@@ -43,7 +43,6 @@ public class ReadConfig {
         }catch (IOException e) {
             e.printStackTrace();
         }
-
         finally {
             try {
                 if (br != null) br.close();

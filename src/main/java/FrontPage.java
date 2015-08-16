@@ -276,5 +276,3 @@ public class FrontPage extends JFrame {
     private JLabel label2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }
-
-

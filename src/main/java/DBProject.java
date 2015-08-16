@@ -29,20 +29,17 @@ public class DBProject extends JFrame {
         //Connect to the MySQL database reading from the test file
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            connect = DriverManager.getConnection(connectionInfo.getURL(), connectionInfo.getUserName(), connectionInfo.getPassword());
+            connect = DriverManager.getConnection(connectionInfo.getURL(), connectionInfo.getUserName(),
+                    connectionInfo.getPassword());
+
+            //Starts and Displays the GUI called FrontPage
+            FrontPage fp = new FrontPage();
+            fp.setVisible(true);
+            fp.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         } catch (Exception e) {
             //Displays a message telling the user that the connection couldn't be made.
             JOptionPane.showMessageDialog(frame, "Error Connecting to the server! Please restart the Program");
             e.printStackTrace();
         }
-        //Starts and Displays the GUI called FrontPage
-        FrontPage fp = new FrontPage();
-        fp.setVisible(true);
-        fp.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-
-
-        //ONE SEC
-
-       //IN ORDER TO MAKE A MAVEN OR ANT YOU MUST DO THIS...
     }
 }
